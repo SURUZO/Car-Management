@@ -27,6 +27,30 @@
 .App-link {
   color: #61dafb;
 }
+/* src/App.css */
+
+/* Apply background color to the entire page */
+body {
+  background-color: #20133e;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent padding and max-width for all main containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Optionally style specific page containers */
+.car-list-container, .add-car-container, .car-detail-container {
+  background-color: white; /* White background for specific sections */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 @keyframes App-logo-spin {
   from {
