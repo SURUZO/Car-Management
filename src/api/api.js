@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create an Axios instance with the backend API base URL
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL, // Update with your backend URL
+  baseURL: 'https://car-management-backend-n946.onrender.com/api',
 });
 
 // Set token in header if present (for authentication)
