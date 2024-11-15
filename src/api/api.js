@@ -9,7 +9,8 @@ const API = axios.create({
 // Set token in header if present (for authentication)
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
-  if (token) {
+  // Add the token only for authenticated routes
+  if (token && config.url !== '/users/signup') {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
