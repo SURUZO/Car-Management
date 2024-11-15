@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create an Axios instance with the backend API base URL
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Update with your backend URL
+  baseURL: process.env.REACT_APP_API_URL, // Update with your backend URL
 });
 
 // Set token in header if present (for authentication)
