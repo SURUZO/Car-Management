@@ -3,14 +3,13 @@ import axios from 'axios';
 
 // Create an Axios instance with the backend API base URL
 const API = axios.create({
-  baseURL: 'https://car-management-backend-n946.onrender.com/api',
+  baseURL: process.env.REACT_APP_API_URL, // Update with your backend URL
 });
 
 // Set token in header if present (for authentication)
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
-  // Add the token only for authenticated routes
-  if (token && config.url !== '/users/signup') {
+  if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
